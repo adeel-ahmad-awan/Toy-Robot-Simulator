@@ -18,6 +18,9 @@ window.input_form_submit = function(event) {
 
 window.turn_left = function(event) {
   let robot = document.getElementsByClassName("robot_img")[0];
+  if((typeof(robot) == "undefined")) {
+    return
+  }
 
   let x_cor =  robot.dataset.x_cor
   let y_cor =  robot.dataset.y_cor
@@ -38,6 +41,9 @@ window.turn_left = function(event) {
 
 window.turn_right = function(event) {
   let robot = document.getElementsByClassName("robot_img")[0];
+  if((typeof(robot) == "undefined")) {
+    return
+  }
 
   let x_cor =  robot.dataset.x_cor
   let y_cor =  robot.dataset.y_cor
@@ -60,6 +66,9 @@ window.turn_right = function(event) {
 
 window.move_forward = function(event) {
   let robot = document.getElementsByClassName("robot_img")[0];
+  if((typeof(robot) == "undefined")) {
+    return
+  }
 
   let x_cor =  robot.dataset.x_cor
   let y_cor =  robot.dataset.y_cor
@@ -87,6 +96,9 @@ window.move_forward = function(event) {
 
 window.view_current_position = function(event) {
   let robot = document.getElementsByClassName("robot_img")[0];
+  if((typeof(robot) == "undefined")) {
+    return
+  }
 
   let x_cor =  robot.dataset.x_cor
   let y_cor =  robot.dataset.y_cor
