@@ -37,13 +37,13 @@
         </div>
         <div class="form-group row">
           <div class="col-sm-10">
-            <button type="submit" onclick="input_form_submit(event)" id="input_form_submit_id" class="btn btn-primary">Place</button>
+            <button type="submit" onclick="input_form_submit(event)" id="input_form_submit_id" class="btn btn-primary" data-submit="<%= frontend_place_robot_path %>" >Place</button>
           </div>
         </div>
       </form>
-      <button type="button" onclick="turn_left(event)" id="input_turn_left" class="btn btn-primary">Turn left</button>
-      <button type="button" onclick="turn_right(event)" id="input_turn_right" class="btn btn-primary">Turn right</button>
-      <button type="button" onclick="move_forward(event)" id="input_move_forward" class="btn btn-primary">Move</button>
+      <button type="button" data-submit="<%= frontend_turn_left_path %>" onclick="turn_left(event)" id="input_turn_left" class="btn btn-primary">Turn left</button>
+      <button type="button" data-submit="<%= frontend_turn_right_path %>" onclick="turn_right(event)" id="input_turn_right" class="btn btn-primary">Turn right</button>
+      <button type="button" data-submit="<%= frontend_move_path %>" onclick="move_forward(event)" id="input_move_forward" class="btn btn-primary">Move</button>
       <button type="button" onclick="view_current_position(event)" id="input_current_position" class="btn btn-primary">Report</button>
     </div>
   </div>
