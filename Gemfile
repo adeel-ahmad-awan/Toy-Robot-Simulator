@@ -58,5 +58,5 @@ group :development, :test do
 end
 
 group :production do
-  gem 'pg'         #gem to use in production environment
+  gem 'pg', '~>1.2.3'       #gem to use in production environment
 end
