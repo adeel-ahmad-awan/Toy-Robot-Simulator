@@ -79,6 +79,7 @@ class FrontendController < ApplicationController
   end
 
   def turn_right
+    # validate_post_request(request.request_method)
     data = params[:data]
     x_cor = data[0]
     y_cor = data[1]
@@ -104,6 +105,19 @@ class FrontendController < ApplicationController
   private
 
   def valid_move(x_cor, y_cor, direction)
+    move = Move.new
+    move.x_cor = x_cor
+    move.y_cor = y_cor
+    move.direction = direction
+    move.save
+
     return x_cor.to_f <= BOARD_WIDTH && x_cor.to_f > 0 && y_cor.to_f <= BOARD_HEIGHT && y_cor.to_f > 0
   end
+
+  def validate_post_request(request_type)
+    if request_type != POST
+      raise ActionController::RoutingError.new('Not Found')
+    end
+  end
+
 end
